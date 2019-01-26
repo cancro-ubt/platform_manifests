@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote  name="anbox" fetch="https://github.com/anbox/" revision="anbox/master" />
+  <remote  name="github" fetch="https://github.com" revision="xenial" />
 
   <remote  name="aosp"
            revision="refs/tags/android-7.1.1_r13"
            fetch="https://android.googlesource.com/" />
+<!--           fetch="git://gits.kuailexs.com" /> -->
 
   <default revision="refs/tags/android-7.1.1_r13"
            remote="aosp"
@@ -341,6 +343,7 @@
   <project path="hardware/libhardware" name="platform_hardware_libhardware" groups="pdk" remote="anbox" />
   <project path="hardware/libhardware_legacy" name="platform_hardware_libhardware_legacy" groups="pdk" remote="anbox" />
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" groups="marvell_bt" />
+<!--
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio" />
   <project path="hardware/qcom/bootctrl" name="platform/hardware/qcom/bootctrl" groups="pdk" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
@@ -357,10 +360,13 @@
   <project path="hardware/qcom/msm8x84" name="platform/hardware/qcom/msm8x84" groups="qcom_msm8x84" />
   <project path="hardware/qcom/power" name="platform/hardware/qcom/power" groups="qcom" />
   <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan" />
+-->
   <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" />
+<!--
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" groups="omap3" />
   <project path="hardware/ti/omap4-aah" name="platform/hardware/ti/omap4-aah" groups="omap4-aah" />
   <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" groups="omap4" />
+-->
   <project path="libcore" name="platform/libcore" groups="pdk" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" />
   <project path="ndk" name="platform/ndk" groups="generic_fs" />
@@ -494,7 +500,7 @@
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/nativepower" name="platform/system/nativepower" />
-  <project path="system/netd" name="platform_system_netd" groups="pdk" remote="anbox" />
+  <project path="system/netd" name="cancro-ubt/platform_system_netd" groups="pdk" remote="github" revision="anbox/master" />
   <project path="system/nvram" name="platform/system/nvram" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
   <project path="system/sepolicy" name="platform/system/sepolicy" groups="pdk" />
@@ -518,5 +524,5 @@
   <project path="tools/test/connectivity" name="platform/tools/test/connectivity" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
 
-  <project path="vendor/anbox" name="anbox" remote="anbox" revision="master" />
+  <project path="vendor/anbox" name="cancro-ubt/anbox" remote="github"/>
 </manifest>
